@@ -1,46 +1,84 @@
 #ifndef __STATS_H__
 #define __STATS_H__
+
+
+
+void print_array(unsigned char *inputArray, unsigned int size);
+void PRINTF_Stats(unsigned char *inputArray,unsigned int size);
+
 /**
-*@ Maximum function takes the array elements and length
-*and return with the maximum
-*
-*/
-int find_maximum(unsigned int num[] ,int len);
+ * @brief Returns the mean value of array
+ *
+ * This function finds the mean of the array
+ * @param *inputArray unsigned pointer to input array
+ * @param size integer type, the length of the array
+ *
+ * @return The mean value of the array
+ */
+float find_mean(unsigned char *inputArray, unsigned int size);
 
-/*
-*@Minimum Function takes the array elements and length
-*and return with the minimum
-* 
-*/
-int find_minimum(unsigned int num[] ,int len);
+/**
+ * @brief Returns the median value of array
+ *
+ * This function finds the mean of the array
+ * @param *inputArray unsigned pointer to input array
+ * @param size integer type, the length of the array
+ *
+ * @return The mean value of the array
+ */
+int find_median(unsigned char *inputArray, unsigned int size);
 
-/*
-*@Mean Function takes the array elements and length
-*Returns with the mean valu
-*/
-float find_mean(unsigned int num[] ,int len);
+/**
+ * @brief Returns the min value of array
+ *
+ * This function finds the mean of the array
+ * @param *inputArray unsigned pointer to input array
+ * @param size integer type, the length of the array
+ *
+ * @return The min value of the array
+ */
+int find_min(unsigned char *inputArray, unsigned int size);
 
-/*
-*@Median Function takes the array elements and length
-*Returns with the median value
-*/
-float find_median(unsigned int num[] ,int len);
+/**
+ * @brief Returns the max value of array
+ *
+ * This function finds the mean of the array
+ * @param *inputArray unsigned pointer to input array
+ * @param size integer type, the length of the array
+ *
+ * @return The max value of the array
+ */
+int find_max(unsigned char *inputArray, unsigned int size);
 
-/*
-@Sort function takes the array elements and length
-*returns with the array sorts from largest to smallest
-*/
-int * sort_array(unsigned int num[] ,int len);
+/**
+ * @brief Returns a sorted array
+ *
+ * This function sort the array in an increasing order
+ * @param *inputArray unsigned pointer to input array
+ * @param size integer type, the length of the array
+ *
+ * @return The sorted value of the array
+ */
+void insertionSort(unsigned char *inputArray, unsigned int size);
 
-/*
-@Print array function takes the array elements and length
-*has no return just print array on screen
-*/
-void print_array(unsigned int num[] ,int len);
+/**
+ * @brief Prints an array to the screen
+ *
+ * This function print each of the elements in the array
+ * @param *inputArray unsigned pointer to input array
+ * @param size integer type, the length of the array
+ *
+ * @return Prints an array to the screen
+ */
+void printArray(unsigned char *inputArray,unsigned int size);
 
-/*
-*@Print statistics function takes minimum, maximum, mean, and median
-*and print them on the screen
-*/
-void print_statistics(unsigned int min,unsigned int max,float mean,float median);
+/**
+ * @brief Prints the statistics of an array
+ *
+ * This function prints the stats of the array by calling the other functions
+ *
+ * @return Prints the statistics of an array (mean, median, max, min)
+ */
+void printStats(unsigned char *inputArray,unsigned int size);
+
 #endif /* __STATS_H__ */
